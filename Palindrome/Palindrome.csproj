@@ -10,9 +10,13 @@
     <None Remove="Interfaces\" />
     <None Remove="System.Net.Http" />
     <None Remove="Microsoft.AspNet.WebApi.Core" />
+    <None Remove="EntityFramework" />
+    <None Remove="System.Data.SqlClient" />
+    <None Remove="System.Configuration.ConfigurationManager" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />

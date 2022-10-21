@@ -25,6 +25,8 @@ namespace Palindrome
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IPalindromeService, PalindromeService>();
         }
 

@@ -24,5 +24,15 @@ namespace Palindrome
 
             return Ok(response);
         }
+
+        [HttpGet]
+        [Route("check/db/{text}")]
+        public ActionResult<PalindromeResponse> CheckIsDbPalindrome(string text)
+        {
+            var isPalindrome = _palindromeService.IsDbPalindrome(text);
+            var response = new PalindromeResponse(isPalindrome);
+
+            return Ok(response);
+        }
     }
 }

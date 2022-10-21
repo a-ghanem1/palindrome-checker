@@ -1,6 +1,8 @@
 ﻿using Xunit;
 using Palindrome.Services;
 using Palindrome.Interfaces;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Palidrome.Tests
 {
