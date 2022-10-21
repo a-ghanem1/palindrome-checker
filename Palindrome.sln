@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.810.25
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "Palindrome\Palindrome.csproj", "{82F5A02E-A9B1-49F9-B279-51854E8AAB44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palidrome.Tests", "Palidrome.Tests\Palidrome.Tests.csproj", "{8A68DFD1-1106-4713-81D9-C324421890A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{82F5A02E-A9B1-49F9-B279-51854E8AAB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F5A02E-A9B1-49F9-B279-51854E8AAB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F5A02E-A9B1-49F9-B279-51854E8AAB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A68DFD1-1106-4713-81D9-C324421890A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A68DFD1-1106-4713-81D9-C324421890A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A68DFD1-1106-4713-81D9-C324421890A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A68DFD1-1106-4713-81D9-C324421890A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

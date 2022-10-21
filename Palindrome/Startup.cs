@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Palindrome.Interfaces;
+using Palindrome.Services;
 
 namespace Palindrome
 {
@@ -23,6 +25,7 @@ namespace Palindrome
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IPalindromeService, PalindromeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
