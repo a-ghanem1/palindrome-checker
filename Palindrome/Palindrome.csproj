@@ -21,5 +21,9 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="wwwroot\imgs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\imgs\" />
   </ItemGroup>
 </Project>

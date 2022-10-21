@@ -22,18 +22,20 @@ namespace Palindrome.Services
 
         public bool IsPalindrome(string text)
         {
-            var trimmedText = text.Replace(" ", "");
+            var trimmedText = text.ToLower().Replace(" ", "");
             return trimmedText.SequenceEqual(trimmedText.Reverse());
         }
 
         public bool IsDbPalindrome(string text)
         {
-            var trimmedText = text.Replace(" ", "");
+            try
+            {
+                var trimmedText = text.ToLower().Replace(" ", "");
 
-            var connectionString = _configuration.GetConnectionString("DefaultConnection");
-            SqlConnection connection = new SqlConnection(connectionString);
+                var connectionString = _configuration.GetConnectionString("DefaultConnection");
+                SqlConnection connection = new SqlConnection(connectionString);
 
-            var storedProcedureQuery = $@"
+                var storedProcedureQuery = $@"
                 DECLARE @string nvarchar(255);
                 SET @string = '{trimmedText}';
 
@@ -47,14 +49,19 @@ namespace Palindrome.Services
                 END
             ";
 
-            SqlCommand sqlCommand = new SqlCommand(storedProcedureQuery, connection);
+                SqlCommand sqlCommand = new SqlCommand(storedProcedureQuery, connection);
 
-            connection.Open();
-            var result = (int)sqlCommand.ExecuteScalar();
-            connection.Close();
+                connection.Open();
+                var result = (int)sqlCommand.ExecuteScalar();
+                connection.Close();
 
-            
-            return Convert.ToBoolean(result);
+
+                return Convert.ToBoolean(result);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }
